@@ -17,6 +17,7 @@ namespace test
                 yield return new object[] {120, 21};
                 yield return new object[] {0, 0};
                 yield return new object[] {int.MaxValue, 0};
+                yield return new object[] {-2147483648, 0};
             }
         }
 

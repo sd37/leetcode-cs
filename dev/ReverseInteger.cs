@@ -6,35 +6,34 @@
     {
         public int Reverse(int x)
         {
-            int num = x;
-
             bool isNegative = x < 0;
-
-            if (isNegative)
-            {
-                num = -x;
-            }
-
-            var revIntStr = ReverseHelper(num.ToString());
-            int revInt;
+            var revIntStr = ReverseHelper(x.ToString(), isNegative);
 
             try
             {
-                revInt = int.Parse(revIntStr);
+                return int.Parse(revIntStr);
             }
             catch (OverflowException)
             {
                 return 0;
             }
-
-            return isNegative ? -1 * revInt : revInt;
         }
 
-        public static string ReverseHelper(string s)
+        public static string ReverseHelper(string s, bool isNegative)
         {
-            char[] charArray = s.ToCharArray();
+            string tmpStr = s;
+            if(isNegative)
+            {
+                // ignore sign
+                tmpStr = s[1..];
+            }
+
+            char[] charArray = tmpStr.ToCharArray();
+
             Array.Reverse(charArray);
-            return new string(charArray);
+            var revStr = new string(charArray);
+
+            return isNegative ? "-" + revStr : revStr;
         }
     }
 }
