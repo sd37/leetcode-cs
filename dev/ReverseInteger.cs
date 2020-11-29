@@ -4,7 +4,7 @@
 
     public class ReverseInteger
     {
-        public int Reverse(int x) 
+        public int Reverse(int x)
         {
             int num = x;
 
@@ -14,13 +14,23 @@
             {
                 num = -x;
             }
-            
-            var revInt = int.Parse(Reverse(num.ToString()));
+
+            var revIntStr = ReverseHelper(num.ToString());
+            int revInt;
+
+            try
+            {
+                revInt = int.Parse(revIntStr);
+            }
+            catch (OverflowException)
+            {
+                return 0;
+            }
 
             return isNegative ? -1 * revInt : revInt;
         }
-        
-        public static string Reverse(string s)
+
+        public static string ReverseHelper(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);

@@ -17,4 +17,7 @@
     </PackageReference>
     <Content Include="TestReverseInteger.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dev\dev.csproj" />
+  </ItemGroup>
 </Project>
