@@ -11,8 +11,6 @@
 // - When the length is 6, averages are [9.16667] and the maximum average is 9.16667
 // The maximum average is when we choose a subarray of length 4 (i.e., the sub array [12, -5, -6, 50]) which has the max average 12.75, so we return 12.75
 // Note that we do not consider the subarrays of length < 4.
-
-
 namespace dev
 {
     using System;
