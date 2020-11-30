@@ -6,5 +6,6 @@
   <ItemGroup>
     <Content Include="ReverseInteger.cs" />
     <Content Include="MaxiumumSubarrayAverageII.cs" />
+    <Content Include="PrintImmutableLLInReverse.cs" />
   </ItemGroup>
 </Project>
