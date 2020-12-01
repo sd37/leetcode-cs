@@ -8,5 +8,6 @@
     <Content Include="MaxiumumSubarrayAverageII.cs" />
     <Content Include="PrintImmutableLLInReverse.cs" />
     <Content Include="CoinChangeProblem.cs" />
+    <Content Include="DivisorGameProblem.cs" />
   </ItemGroup>
 </Project>

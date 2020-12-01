@@ -21,5 +21,6 @@
     <ProjectReference Include="..\dev\dev.csproj" />
     <Content Include="TestMaximumSubarrayAverageII.cs" />
     <Content Include="TestCoinChangeProblem.cs" />
+    <Content Include="TestDivisionGameProblem.cs" />
   </ItemGroup>
 </Project>
