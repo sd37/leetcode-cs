@@ -9,9 +9,9 @@ Also, if a player cannot make a move, they lose the game.
 
 Return True if and only if Alice wins the game, assuming both players play optimally.
 
-// https://leetcode.com/problems/divisor-game/
-// Status = AC
- * /
+https://leetcode.com/problems/divisor-game/
+Status = AC
+*/
 namespace dev
 {
     using System.Collections.Generic;
