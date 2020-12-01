@@ -1,3 +1,11 @@
+/*
+You are given coins of different denominations and a total amount of money amount. Write a function to compute the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+You may assume that you have an infinite number of each kind of coin.
+
+Status = AC
+https://leetcode.com/problems/coin-change/
+*/
 namespace dev
 {
     using System.Collections;
@@ -18,16 +26,19 @@ namespace dev
 
         public int CoinChangeHelper(HashSet<int> coins, int amount)
         {
+            if(amount < 0)
+            {
+                return -1;
+            }
+
             if(amount == 0 || coins.Count == 0)
             {
-                coinSolns[0] = 0;
-                return coinSolns[0];
+                return coinSolns[0] = 0;
             }
 
             if(coins.Contains(amount))
             {
-                coinSolns[amount] = 1;
-                return coinSolns[amount];
+                return coinSolns[amount] = 1;
             }
 
             if(!coinSolns.ContainsKey(amount))
@@ -37,16 +48,21 @@ namespace dev
 
                 foreach (var coin in coins)
                 {
-                    if(amount - coin < 0)
-                    {
-                        continue;
-                    }
-
                     var res = CoinChangeHelper(coins, amount - coin);
-                    minChange = Math.Min(minChange, res);
+                    if(res >=0)
+                    {
+                        minChange = Math.Min(minChange, res);
+                    }
                 }
 
-                coinSolns[amount] = 1 + minChange;
+                if(minChange == int.MaxValue)
+                {
+                    coinSolns[amount] = -1;
+                }
+                else
+                {
+                    coinSolns[amount] = 1 + minChange;
+                }
             }
 
             return coinSolns[amount];
