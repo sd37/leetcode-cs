@@ -7,5 +7,6 @@
     <Content Include="ReverseInteger.cs" />
     <Content Include="MaxiumumSubarrayAverageII.cs" />
     <Content Include="PrintImmutableLLInReverse.cs" />
+    <Content Include="CoinChangeProblem.cs" />
   </ItemGroup>
 </Project>
