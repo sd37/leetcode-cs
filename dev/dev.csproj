@@ -10,5 +10,7 @@
     <Content Include="CoinChangeProblem.cs" />
     <Content Include="DivisorGameProblem.cs" />
     <Content Include="MinCostClimbStairsProblem.cs" />
+    <Content Include="DiameterOfBinaryTreeProblem.cs" />
+    <Content Include="objects\TreeNode.cs" />
   </ItemGroup>
 </Project>
