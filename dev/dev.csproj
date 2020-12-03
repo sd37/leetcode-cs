@@ -9,5 +9,6 @@
     <Content Include="PrintImmutableLLInReverse.cs" />
     <Content Include="CoinChangeProblem.cs" />
     <Content Include="DivisorGameProblem.cs" />
+    <Content Include="MinCostClimbStairsProblem.cs" />
   </ItemGroup>
 </Project>

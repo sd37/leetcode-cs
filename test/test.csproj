@@ -22,5 +22,6 @@
     <Content Include="TestMaximumSubarrayAverageII.cs" />
     <Content Include="TestCoinChangeProblem.cs" />
     <Content Include="TestDivisionGameProblem.cs" />
+    <Content Include="TestMinCostClimbingStairs.cs" />
   </ItemGroup>
 </Project>
