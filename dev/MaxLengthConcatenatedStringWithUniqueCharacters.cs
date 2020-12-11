@@ -58,6 +58,7 @@
 // @lc code=start
 // 
 
+// Status = AC
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -112,14 +113,20 @@ public class MaxLengthConcatenateStringWithUniqueCharacters
         }
     }
 
-    public void MaxLengthHelper(IList<string> currentArray, SolnDS soln)
+    public void MaxLengthHelper(IList<string> currentArray, SolnDS soln, int TotalUniqueChars)
     {
         foreach (var item in currentArray)
         {
             if(soln.IsSafe(item))
             {
                 soln.Add(item);
-                this.MaxLengthHelper(currentArray, soln);
+
+                if(soln.maxLength == TotalUniqueChars)
+                {
+                    return;
+                }
+
+                this.MaxLengthHelper(currentArray, soln, TotalUniqueChars);
             }
 
             // try next one.
@@ -135,10 +142,19 @@ public class MaxLengthConcatenateStringWithUniqueCharacters
         {
             return 0;
         }
+        
+        var filteredArray = arr.Where(x => x.Distinct().Count() == x.Length).ToArray();
+        
+        if(filteredArray.Length == 0)
+        {
+            return 0;
+        }
+
+        int totalUniqueChars = filteredArray.SelectMany(x => x.ToCharArray()).Distinct().Count();
 
         var soln = new SolnDS();
 
-        this.MaxLengthHelper(arr, soln);
+        this.MaxLengthHelper(filteredArray, soln, totalUniqueChars);
         return soln.maxLength;
     }
 }

@@ -12,10 +12,11 @@ namespace test
         {
             public static IEnumerable<object[]> GenerateTestData()
             {
-                // yield return new object[] { new string[] { "un","iq","ue"}, 4};
-                // yield return new object[] { new string[] { "cha","r","act","ers" }, 6 };
-                // yield return new object[] { new string[] { "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p" }, 6 };
+                yield return new object[] { new string[] { "un","iq","ue"}, 4};
+                yield return new object[] { new string[] { "cha","r","act","ers" }, 6 };
+                yield return new object[] { new string[] { "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p" }, 16 };
                 yield return new object[] { new string[] { "a","b" }, 2 };
+                yield return new object[] { new string[] { "aa","bbb" }, 0 };
             }
         }
 
