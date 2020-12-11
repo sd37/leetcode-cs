@@ -12,5 +12,7 @@
     <Content Include="MinCostClimbStairsProblem.cs" />
     <Content Include="DiameterOfBinaryTreeProblem.cs" />
     <Content Include="objects\TreeNode.cs" />
+    <Content Include="LonelyNodeProblem.cs" />
+    <Content Include="MaxLengthConcatenatedStringWithUniqueCharacters.cs" />
   </ItemGroup>
 </Project>
